@@ -1,0 +1,1346 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tyrrrz.Extensions</name>
+    </assembly>
+    <members>
+        <member name="T:Tyrrrz.Extensions.Ext">
+            <summary>
+            Extension methods for rapid development
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.NotNullAndAny``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})">
+            <summary>
+            If the <see cref="T:System.Collections.Generic.IEnumerable`1"/> is null returns false, otherwise has the same affect as <see cref="M:System.Linq.Enumerable.Any``1(System.Collections.Generic.IEnumerable{``0})"/>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.NotNullAndAny``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            If the <see cref="T:System.Collections.Generic.IEnumerable`1"/> is null returns false, otherwise has the same affect as <see cref="M:System.Linq.Enumerable.Any``1(System.Collections.Generic.IEnumerable{``0})"/>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.GetRandom``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Returns a random member of an <see cref="T:System.Collections.Generic.IEnumerable`1"/>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.GetRandomOrDefault``1(System.Collections.Generic.IEnumerable{``0},``0)">
+            <summary>
+            Returns a random member of an <see cref="T:System.Collections.Generic.IEnumerable`1"/> or default if it's empty
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.Without``1(System.Collections.Generic.IEnumerable{``0},``0)">
+            <summary>
+            Filters the given <see cref="T:System.Collections.Generic.IEnumerable`1"/> returning a new one, consisting only of items NOT equal to <paramref name="value"/>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.Without``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IEqualityComparer{``0})">
+            <summary>
+            Filters the given <see cref="T:System.Collections.Generic.IEnumerable`1"/> returning a new one, consisting only of items NOT equal to <paramref name="value"/>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.WithoutNull``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Filters the given <see cref="T:System.Collections.Generic.IEnumerable`1"/> returning a new one, consisting only of items that are not null
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.WithoutDefault``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Filters the given <see cref="T:System.Collections.Generic.IEnumerable`1"/> returning a new one, consisting only of items that don't have default value
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.TakeLast``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            Trims the <see cref="T:System.Collections.Generic.IEnumerable`1"/> returning a new one, consisting only of the last <paramref name="count"/> items
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.SkipLast``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            Trims the <see cref="T:System.Collections.Generic.IEnumerable`1"/> returning a new one, disposing of the last <paramref name="count"/> items
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            Invokes a delegate on every member of an <see cref="T:System.Collections.Generic.IEnumerable`1"/>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ToHashSet``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Creates a <see cref="T:System.Collections.Generic.HashSet`1"/> from a <see cref="T:System.Collections.Generic.IEnumerable`1"/>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.JoinToString``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            Joins member of an <see cref="T:System.Collections.Generic.IEnumerable`1"/> into a string, separated by given string
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.AddIfDistinct``1(System.Collections.Generic.IList{``0},``0)">
+            <summary>
+            Adds a new item to an <see cref="T:System.Collections.Generic.IList`1"/> if it's not there yet
+            </summary>
+            <returns>True if it wasn't there, false if it was</returns>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.AddIfDistinct``1(System.Collections.Generic.IList{``0},``0,System.Collections.Generic.IEqualityComparer{``0})">
+            <summary>
+            Adds a new item to an <see cref="T:System.Collections.Generic.IList`1"/> if it's not there yet
+            </summary>
+            <returns>True if it wasn't there, false if it was</returns>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.IndexOf``1(System.Collections.Generic.IList{``0},``0)">
+            <summary>
+            Searches for an item in an <see cref="T:System.Collections.Generic.IList`1"/> returning its index
+            <returns>Item index if found, -1 if not found</returns>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.IndexOf``1(System.Collections.Generic.IList{``0},``0,System.Collections.Generic.IEqualityComparer{``0})">
+            <summary>
+            Searches for an item in an <see cref="T:System.Collections.Generic.IList`1"/> returning its index
+            <returns>Item index if found, -1 if not found</returns>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.IndexOf``1(System.Collections.Generic.IList{``0},System.Func{``0,System.Boolean})">
+            <summary>
+            Searches for an item in an <see cref="T:System.Collections.Generic.IList`1"/> returning its index
+            <returns>Item index if found, -1 if not found</returns>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.LastIndexOf``1(System.Collections.Generic.IList{``0},``0)">
+            <summary>
+            Searches for an item in an <see cref="T:System.Collections.Generic.IList`1"/> returning index of it's last occurence
+            <returns>Item index if found, -1 if not found</returns>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.LastIndexOf``1(System.Collections.Generic.IList{``0},``0,System.Collections.Generic.IEqualityComparer{``0})">
+            <summary>
+            Searches for an item in an <see cref="T:System.Collections.Generic.IList`1"/> returning index of it's last occurence
+            <returns>Item index if found, -1 if not found</returns>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.LastIndexOf``1(System.Collections.Generic.IList{``0},System.Func{``0,System.Boolean})">
+            <summary>
+            Searches for an item in an <see cref="T:System.Collections.Generic.IList`1"/> returning index of it's last occurence
+            <returns>Item index if found, -1 if not found</returns>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.LastIndex``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Returns the last index of an <see cref="T:System.Collections.Generic.IEnumerable`1"/>
+            <returns>Last index if there are any items, -1 if there aren't</returns>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.LastIndex``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Returns the last index of an <see cref="T:System.Collections.Generic.IList`1"/>
+            <returns>Last index if there are any items, -1 if there aren't</returns>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.LastIndex``1(``0[],System.Int32)">
+            <summary>
+            Returns the last index of an array for the given dimension
+            <returns>Last index if there are any items, -1 if there aren't</returns>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.GetOrDefault``1(System.Collections.Generic.IList{``0},System.Int32,``0)">
+            <summary>
+            Returns the value of an <see cref="T:System.Collections.Generic.IList`1"/> by given <paramref name="index"/> or default if out of bounds
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.Fill``1(System.Collections.Generic.IList{``0},``0)">
+            <summary>
+            Sets all values in an <see cref="T:System.Collections.Generic.IList`1"/> to given <paramref name="value"/>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.Fill``1(System.Collections.Generic.IList{``0},``0,System.Int32)">
+            <summary>
+            Sets all values in an <see cref="T:System.Collections.Generic.IList`1"/> to given <paramref name="value"/>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.Fill``1(System.Collections.Generic.IList{``0},``0,System.Int32,System.Int32)">
+            <summary>
+            Sets all values in an <see cref="T:System.Collections.Generic.IList`1"/> to given <paramref name="value"/>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.EnsureMaxCount``1(System.Collections.Generic.IList{``0},System.Int32,Tyrrrz.Extensions.Types.EnsureMaxCountMode)">
+            <summary>
+            Makes sure that the <see cref="T:System.Collections.Generic.IList`1"/> has no more items than specified by removing other items
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.SetOrAdd``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)">
+            <summary>
+            Sets the <see cref="T:System.Collections.Generic.IDictionary`2"/> value for the given key or adds a new pair if it doesn't exist
+            <returns>True if the key already existed, false if new one was added</returns>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.GetOrDefault``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)">
+            <summary>
+            Returns the value of a <see cref="T:System.Collections.Generic.IDictionary`2"/>, based on key or default if it doesn't exist
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.HasFlags(System.Enum,System.Enum[])">
+            <summary>
+            Returns true if the enum value has all of the given flags set
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseEnum``1(System.String)">
+            <summary>
+            Parses string to enum
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseEnumOrDefault``1(System.String,``0)">
+            <summary>
+            Parses string to enum or default value
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.GetAllEnumValues``1">
+            <summary>
+            Gets all possible values of an enumeration
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.GetAllEnumValues``1(System.Type)">
+            <summary>
+            Gets all possible values of an enumeration
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.GetPath(System.Environment.SpecialFolder,System.Environment.SpecialFolderOption)">
+            <summary>
+            Returns the path of the given special folder
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.RandomEnum``1">
+            <summary>
+            Returns a random bool
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ConvertTo``1(System.Object)">
+            <summary>
+            Converts an object to one of another type
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ConvertTo(System.Object,System.Type)">
+            <summary>
+            Converts an object to one of another type
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ConvertOrDefault``1(System.Object,``0)">
+            <summary>
+            Tries to convert an object to a different type, returns the new value if successful or default value if not
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.IsEither``1(``0,System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Returns true if the object is equal to one of the items in an <see cref="T:System.Collections.Generic.IEnumerable`1"/>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.IsEither``1(``0,``0[])">
+            <summary>
+            Returns true if the object is equal to one of the parameters
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.IsInRange(System.IComparable,System.IComparable,System.IComparable)">
+            <summary>
+            Checks if the value is in given range
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.Clamp``1(``0,``0,``0)">
+            <summary>
+            Makes sure the value is in given range
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ClampMin``1(``0,``0)">
+            <summary>
+            Makes sure the value is not lower than given minimum
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ClampMax``1(``0,``0)">
+            <summary>
+            Makes sure the value is not higher than given maximum
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.Parse``1(System.String,Tyrrrz.Extensions.Ext.ParseDelegate{``0})">
+            <summary>
+            Parses the string into an object of generic type using a <see cref="T:Tyrrrz.Extensions.Ext.ParseDelegate`1"/> handler
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseOrDefault``1(System.String,Tyrrrz.Extensions.Ext.TryParseDelegate{``0},``0)">
+            <summary>
+            Parses the string into an object of generic type using a <see cref="T:Tyrrrz.Extensions.Ext.TryParseDelegate`1"/> handler
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseFloat(System.String)">
+            <summary>
+            Parses the string into float
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseFloatOrDefault(System.String,System.Single)">
+            <summary>
+            Parses the string into float or returns the default value if it fails
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseDouble(System.String)">
+            <summary>
+            Parses the string into double
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseDoubleOrDefault(System.String,System.Double)">
+            <summary>
+            Parses the string into double or returns the default value if it fails
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseDecimal(System.String)">
+            <summary>
+            Parses the string into decimal
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseDecimalOrDefault(System.String,System.Decimal)">
+            <summary>
+            Parses the string into decimal or returns the default value if it fails
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseShort(System.String)">
+            <summary>
+            Parses the string into short
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseShortOrDefault(System.String,System.Int16)">
+            <summary>
+            Parses the string into short or returns the default value if it fails
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseInt(System.String)">
+            <summary>
+            Parses the string into int
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseIntOrDefault(System.String,System.Int32)">
+            <summary>
+            Parses the string into int or returns the default value if it fails
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseLong(System.String)">
+            <summary>
+            Parses the string into long
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseLongOrDefault(System.String,System.Int64)">
+            <summary>
+            Parses the string into long or returns the default value if it fails
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseByte(System.String)">
+            <summary>
+            Parses the string into byte
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseByteOrDefault(System.String,System.Byte)">
+            <summary>
+            Parses the string into byte or returns the default value if it fails
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseUint(System.String)">
+            <summary>
+            Parses the string into uint
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseUintOrDefault(System.String,System.UInt32)">
+            <summary>
+            Parses the string into uint or returns the default value if it fails
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseUlong(System.String)">
+            <summary>
+            Parses the string into ulong
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ParseUlongOrDefault(System.String,System.UInt64)">
+            <summary>
+            Parses the string into ulong or returns the default value if it fails
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.CeilingToInt(System.Double)">
+            <summary>
+            Ceils the double and returns an int
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.FloorToInt(System.Double)">
+            <summary>
+            Floors the double and return an int
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.Fraction(System.Double)">
+            <summary>
+            Returns the fractional point of a double
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.RandomInt">
+            <summary>
+            Returns a random integer
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.RandomInt(System.Int32)">
+            <summary>
+            Returns a random integer, smaller or equal to given
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.RandomInt(System.Int32,System.Int32)">
+            <summary>
+            Returns a random integer in range (inclusive)
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.RandomDouble">
+            <summary>
+            Returns a random double
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.RandomDouble(System.Double)">
+            <summary>
+            Returns a random double, smaller than given
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.RandomDouble(System.Double,System.Double)">
+            <summary>
+            Returns a random double in range
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.RandomBool(System.Double)">
+            <summary>
+            Returns a random bool
+            </summary>
+            <param name="probability">Probability of returning "true" (0 to 1)</param>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.RandomBool">
+            <summary>
+            Returns a random bool
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ShallowCopy``1(``0)">
+            <summary>
+            Creates a shallow copy of an object using <see cref="M:System.Object.MemberwiseClone"/>
+            </summary>
+        </member>
+        <member name="T:Tyrrrz.Extensions.Ext.ParseDelegate`1">
+            <summary>
+            Generic string parse delegate
+            </summary>
+        </member>
+        <member name="T:Tyrrrz.Extensions.Ext.TryParseDelegate`1">
+            <summary>
+            Generic string try-parse delegate
+            </summary>
+        </member>
+        <member name="P:Tyrrrz.Extensions.Ext.DefaultStringComparison">
+            <summary>
+            Default comparison for methods that compare strings
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.StringDifference(System.String,System.String)">
+            <summary>
+            Gets the array of non-mutual chars between two strings
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.Format(System.String,System.Object[])">
+            <summary>
+            Formats the given string identically to <see cref="M:System.String.Format(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.Reverse(System.String)">
+            <summary>
+            Reverses the characters in a string
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.Repeat(System.String,System.Int32)">
+            <summary>
+            Repeats the given string <paramref name="count"/> times
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.Repeat(System.Char,System.Int32)">
+            <summary>
+            Repeats the given character <paramref name="count"/> times
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.Take(System.String,System.Int32)">
+            <summary>
+            Returns the string, taking only <paramref name="charCount"/> characters
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.Skip(System.String,System.Int32)">
+            <summary>
+            Returns the string, skipping first <paramref name="charCount"/> characters
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.TakeLast(System.String,System.Int32)">
+            <summary>
+            Returns the string, taking only last <paramref name="charCount"/> characters
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.SkipLast(System.String,System.Int32)">
+            <summary>
+            Returns the string, skipping last <paramref name="charCount"/> characters
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.Without(System.String,System.String[])">
+            <summary>
+            Returns the given string, without any of the substrings occuring
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.Without(System.String,System.Char[])">
+            <summary>
+            Returns the given string, without any of the characters occuring
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.EnsureEndsWith(System.String,System.String)">
+            <summary>
+            Makes sure the given string ends with the given other substring
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.EnsureStartsWith(System.String,System.String)">
+            <summary>
+            Makes sure the given string starts with the given other substring
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.SubstringUntil(System.String,System.String)">
+            <summary>
+            Returns substring of a string until the occurence of the other string
+            If the other string is not found, returns full string
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.SubstringAfter(System.String,System.String)">
+            <summary>
+            Returns substring of a string after the occurence of the other string
+            If the other string is not found, returns empty string
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.GetString(System.Byte[],System.Text.Encoding)">
+            <summary>
+            Converts byte array to string
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.GetString(System.Byte[])">
+            <summary>
+            Converts byte array to string using UTF8 encoding
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.GetBytes(System.String,System.Text.Encoding)">
+            <summary>
+            Converts string to byte array
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.GetBytes(System.String)">
+            <summary>
+            Converts string to byte array using UTF8 encoding
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ToBase64(System.Byte[])">
+            <summary>
+            Converts an array of bytes to a base64 string
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.FromBase64(System.String)">
+            <summary>
+            Converts a base64 string to a byte array
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.SplitInclusive(System.String,System.String[])">
+            <summary>
+            Split string into substrings using separator strings.
+            Separators are also included.
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.Split(System.String,System.String[])">
+            <summary>
+            Split string into substrings using separator strings, removing empty strings
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.Split(System.String,System.Char[])">
+            <summary>
+            Split string into substrings using separator characters, removing empty strings
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.SplitTrim(System.String,System.String,System.Char[])">
+            <summary>
+            Split string into substrings using separator string.
+            Empty strings are removed and existing are trimmed.
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.SplitTrim(System.String,System.String)">
+            <summary>
+            Split string into substrings using separator string.
+            Empty strings are removed and existing are trimmed.
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.WithoutBlank(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Filters out blank strings from an enumerable
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ContainsInvariant(System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            Determines whether the string enumerable contains second string.
+            Casing and culture are ignored, useless spaces are trimmed.
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.StripCommonStart(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Strips the longest common string for the given enumerable of string, which has it's origin at string start
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.StripCommonEnd(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Strips the longest common string for the given enumerable of string, which has it's origin at string end
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.TrimAll(System.Collections.Generic.IEnumerable{System.String},System.Char[])">
+            <summary>
+            Trims strings in an enumerable
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.TrimAll(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Trims strings in an enumerable
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.IsBlank(System.String)">
+            <summary>
+            Returns true if the string is empty, null or whitespace
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.IsNotBlank(System.String)">
+            <summary>
+            Returns true if the string is neither empty, null nor whitespace
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.IsNumeric(System.String)">
+            <summary>
+            Checks whether the string only consists of numeric characters
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.EqualsInvariant(System.String,System.String)">
+            <summary>
+            Determines whether first string equals second.
+            Casing and culture are ignored, useless spaces are trimmed.
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ContainsInvariant(System.String,System.String)">
+            <summary>
+            Determines whether first string contains second.
+            Casing and culture are ignored, useless spaces are trimmed.
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ContainsWord(System.String,System.String)">
+            <summary>
+            Determines whether the first string contains the second string, surrounded by spaces or linebreaks
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.LevenshteinDistance(System.String,System.String)">
+            <summary>
+            Compute Levenshtein distance (cost) between two strings
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.GetNumberOfOccurences(System.String,System.String,System.Int32)">
+            <summary>
+            Get the number of occurrences of a substring inside a string
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.IndexOfAny(System.String,System.Collections.Generic.IEnumerable{System.String},System.Int32,System.String@)">
+            <summary>
+            Returns the first occurence of any substrings in enumerable
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.IndexOfAny(System.String,System.Collections.Generic.IEnumerable{System.String},System.Int32)">
+            <summary>
+            Returns the first occurence of any substrings in enumerable
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.IndicesOf(System.String,System.String,System.Int32)">
+            <summary>
+            Returns all position indices of given substring inside given string
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ToUri(System.String)">
+            <summary>
+            Converts a string to URI
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ToUri(System.String,System.String)">
+            <summary>
+            Converts a string to relative uri, with a given base uri
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.ToUri(System.String,System.Uri)">
+            <summary>
+            Converts a string to relative uri, with a given base uri
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.UrlEncode(System.String)">
+            <summary>
+            Returns URL encoded version of the given string
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.UrlDecode(System.String)">
+            <summary>
+            Returns URL decoded version of the given string
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Ext.TrimToString(System.Version)">
+            <summary>
+            Trims trailing zeroes in the version object and returns its string representation
+            </summary>
+        </member>
+        <member name="T:Tyrrrz.Extensions.Types.EnsureMaxCountMode">
+            <summary>
+            Specifies how to ensure max count in a list
+            </summary>
+        </member>
+        <member name="F:Tyrrrz.Extensions.Types.EnsureMaxCountMode.DeleteFirst">
+            <summary>
+            Deletes the first element in the list
+            </summary>
+        </member>
+        <member name="F:Tyrrrz.Extensions.Types.EnsureMaxCountMode.DeleteLast">
+            <summary>
+            Deletes the last element in the list
+            </summary>
+        </member>
+        <member name="F:Tyrrrz.Extensions.Types.EnsureMaxCountMode.DeleteRandom">
+            <summary>
+            Deletes a random element in the list
+            </summary>
+        </member>
+        <member name="F:Tyrrrz.Extensions.Types.EnsureMaxCountMode.DeleteAll">
+            <summary>
+            Deletes all elements in the list
+            </summary>
+        </member>
+        <member name="T:Tyrrrz.Extensions.Types.Pair`1">
+            <summary>
+            Pair of two objects of same type
+            </summary>
+        </member>
+        <member name="P:Tyrrrz.Extensions.Types.Pair`1.Left">
+            <summary>
+            Left-side object
+            </summary>
+        </member>
+        <member name="P:Tyrrrz.Extensions.Types.Pair`1.Right">
+            <summary>
+            Right-side object
+            </summary>
+        </member>
+        <member name="M:Tyrrrz.Extensions.Types.Pair`1.#ctor(`0,`0)">
+            <summary>
+            Create a pair of two objects
+            </summary>
+        </member>
+        <member name="T:Tyrrrz.Extensions.Types.PathTargetType">
+            <summary>
+            Type of the target of a path
+            </summary>
+        </member>
+        <member name="F:Tyrrrz.Extensions.Types.PathTargetType.Unknown">
+            <summary>
+            Could not determine
+            </summary>
+        </member>
+        <member name="F:Tyrrrz.Extensions.Types.PathTargetType.File">
+            <summary>
+            Target is a file
+            </summary>
+        </member>
+        <member name="F:Tyrrrz.Extensions.Types.PathTargetType.Directory">
+            <summary>
+            Target is a directory
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.CanBeNullAttribute">
+            <summary>
+            Indicates that the value of the marked element could be <c>null</c> sometimes,
+            so the check for <c>null</c> is necessary before its usage.
+            </summary>
+            <example><code>
+            [CanBeNull] object Test() => null;
+            
+            void UseTest() {
+              var p = Test();
+              var s = p.ToString(); // Warning: Possible 'System.NullReferenceException'
+            }
+            </code></example>
+        </member>
+        <member name="T:JetBrains.Annotations.NotNullAttribute">
+            <summary>
+            Indicates that the value of the marked element could never be <c>null</c>.
+            </summary>
+            <example><code>
+            [NotNull] object Foo() {
+              return null; // Warning: Possible 'null' assignment
+            }
+            </code></example>
+        </member>
+        <member name="T:JetBrains.Annotations.ItemNotNullAttribute">
+            <summary>
+            Can be appplied to symbols of types derived from IEnumerable as well as to symbols of Task
+            and Lazy classes to indicate that the value of a collection item, of the Task.Result property
+            or of the Lazy.Value property can never be null.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.ItemCanBeNullAttribute">
+            <summary>
+            Can be appplied to symbols of types derived from IEnumerable as well as to symbols of Task
+            and Lazy classes to indicate that the value of a collection item, of the Task.Result property
+            or of the Lazy.Value property can be null.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.ImplicitNotNullAttribute">
+            <summary>
+            Implicitly apply [NotNull]/[ItemNotNull] annotation to all the of type members and parameters
+            in particular scope where this annotation is used (type declaration or whole assembly).
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.StringFormatMethodAttribute">
+            <summary>
+            Indicates that the marked method builds string by format pattern and (optional) arguments.
+            Parameter, which contains format string, should be given in constructor. The format string
+            should be in <see cref="M:System.String.Format(System.IFormatProvider,System.String,System.Object[])"/>-like form.
+            </summary>
+            <example><code>
+            [StringFormatMethod("message")]
+            void ShowError(string message, params object[] args) { /* do something */ }
+            
+            void Foo() {
+              ShowError("Failed: {0}"); // Warning: Non-existing argument in format string
+            }
+            </code></example>
+        </member>
+        <member name="M:JetBrains.Annotations.StringFormatMethodAttribute.#ctor(System.String)">
+            <param name="formatParameterName">
+            Specifies which parameter of an annotated method should be treated as format-string
+            </param>
+        </member>
+        <member name="T:JetBrains.Annotations.ValueProviderAttribute">
+            <summary>
+            For a parameter that is expected to be one of the limited set of values.
+            Specify fields of which type should be used as values for this parameter.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.InvokerParameterNameAttribute">
+            <summary>
+            Indicates that the function argument should be string literal and match one
+            of the parameters of the caller function. For example, ReSharper annotates
+            the parameter of <see cref="T:System.ArgumentNullException"/>.
+            </summary>
+            <example><code>
+            void Foo(string param) {
+              if (param == null)
+                throw new ArgumentNullException("par"); // Warning: Cannot resolve symbol
+            }
+            </code></example>
+        </member>
+        <member name="T:JetBrains.Annotations.NotifyPropertyChangedInvocatorAttribute">
+             <summary>
+             Indicates that the method is contained in a type that implements
+             <c>System.ComponentModel.INotifyPropertyChanged</c> interface and this method
+             is used to notify that some property value changed.
+             </summary>
+             <remarks>
+             The method should be non-static and conform to one of the supported signatures:
+             <list>
+             <item><c>NotifyChanged(string)</c></item>
+             <item><c>NotifyChanged(params string[])</c></item>
+             <item><c>NotifyChanged{T}(Expression{Func{T}})</c></item>
+             <item><c>NotifyChanged{T,U}(Expression{Func{T,U}})</c></item>
+             <item><c>SetProperty{T}(ref T, T, string)</c></item>
+             </list>
+             </remarks>
+             <example><code>
+             public class Foo : INotifyPropertyChanged {
+               public event PropertyChangedEventHandler PropertyChanged;
+             
+               [NotifyPropertyChangedInvocator]
+               protected virtual void NotifyChanged(string propertyName) { ... }
+            
+               string _name;
+             
+               public string Name {
+                 get { return _name; }
+                 set { _name = value; NotifyChanged("LastName"); /* Warning */ }
+               }
+             }
+             </code>
+             Examples of generated notifications:
+             <list>
+             <item><c>NotifyChanged("Property")</c></item>
+             <item><c>NotifyChanged(() =&gt; Property)</c></item>
+             <item><c>NotifyChanged((VM x) =&gt; x.Property)</c></item>
+             <item><c>SetProperty(ref myField, value, "Property")</c></item>
+             </list>
+             </example>
+        </member>
+        <member name="T:JetBrains.Annotations.ContractAnnotationAttribute">
+            <summary>
+            Describes dependency between method input and output.
+            </summary>
+            <syntax>
+            <p>Function Definition Table syntax:</p>
+            <list>
+            <item>FDT      ::= FDTRow [;FDTRow]*</item>
+            <item>FDTRow   ::= Input =&gt; Output | Output &lt;= Input</item>
+            <item>Input    ::= ParameterName: Value [, Input]*</item>
+            <item>Output   ::= [ParameterName: Value]* {halt|stop|void|nothing|Value}</item>
+            <item>Value    ::= true | false | null | notnull | canbenull</item>
+            </list>
+            If method has single input parameter, it's name could be omitted.<br/>
+            Using <c>halt</c> (or <c>void</c>/<c>nothing</c>, which is the same)
+            for method output means that the methos doesn't return normally.<br/>
+            <c>canbenull</c> annotation is only applicable for output parameters.<br/>
+            You can use multiple <c>[ContractAnnotation]</c> for each FDT row,
+            or use single attribute with rows separated by semicolon.<br/>
+            </syntax>
+            <examples><list>
+            <item><code>
+            [ContractAnnotation("=> halt")]
+            public void TerminationMethod()
+            </code></item>
+            <item><code>
+            [ContractAnnotation("halt &lt;= condition: false")]
+            public void Assert(bool condition, string text) // regular assertion method
+            </code></item>
+            <item><code>
+            [ContractAnnotation("s:null => true")]
+            public bool IsNullOrEmpty(string s) // string.IsNullOrEmpty()
+            </code></item>
+            <item><code>
+            // A method that returns null if the parameter is null,
+            // and not null if the parameter is not null
+            [ContractAnnotation("null => null; notnull => notnull")]
+            public object Transform(object data) 
+            </code></item>
+            <item><code>
+            [ContractAnnotation("s:null=>false; =>true,result:notnull; =>false, result:null")]
+            public bool TryParse(string s, out Person result)
+            </code></item>
+            </list></examples>
+        </member>
+        <member name="T:JetBrains.Annotations.LocalizationRequiredAttribute">
+            <summary>
+            Indicates that marked element should be localized or not.
+            </summary>
+            <example><code>
+            [LocalizationRequiredAttribute(true)]
+            class Foo {
+              string str = "my string"; // Warning: Localizable string
+            }
+            </code></example>
+        </member>
+        <member name="T:JetBrains.Annotations.CannotApplyEqualityOperatorAttribute">
+            <summary>
+            Indicates that the value of the marked type (or its derivatives)
+            cannot be compared using '==' or '!=' operators and <c>Equals()</c>
+            should be used instead. However, using '==' or '!=' for comparison
+            with <c>null</c> is always permitted.
+            </summary>
+            <example><code>
+            [CannotApplyEqualityOperator]
+            class NoEquality { }
+            
+            class UsesNoEquality {
+              void Test() {
+                var ca1 = new NoEquality();
+                var ca2 = new NoEquality();
+                if (ca1 != null) { // OK
+                  bool condition = ca1 == ca2; // Warning
+                }
+              }
+            }
+            </code></example>
+        </member>
+        <member name="T:JetBrains.Annotations.BaseTypeRequiredAttribute">
+            <summary>
+            When applied to a target attribute, specifies a requirement for any type marked
+            with the target attribute to implement or inherit specific type or types.
+            </summary>
+            <example><code>
+            [BaseTypeRequired(typeof(IComponent)] // Specify requirement
+            class ComponentAttribute : Attribute { }
+            
+            [Component] // ComponentAttribute requires implementing IComponent interface
+            class MyComponent : IComponent { }
+            </code></example>
+        </member>
+        <member name="T:JetBrains.Annotations.UsedImplicitlyAttribute">
+            <summary>
+            Indicates that the marked symbol is used implicitly (e.g. via reflection, in external library),
+            so this symbol will not be marked as unused (as well as by other usage inspections).
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.MeansImplicitUseAttribute">
+            <summary>
+            Should be used on attributes and causes ReSharper to not mark symbols marked with such attributes
+            as unused (as well as by other usage inspections)
+            </summary>
+        </member>
+        <member name="F:JetBrains.Annotations.ImplicitUseKindFlags.Access">
+            <summary>Only entity marked with attribute considered used.</summary>
+        </member>
+        <member name="F:JetBrains.Annotations.ImplicitUseKindFlags.Assign">
+            <summary>Indicates implicit assignment to a member.</summary>
+        </member>
+        <member name="F:JetBrains.Annotations.ImplicitUseKindFlags.InstantiatedWithFixedConstructorSignature">
+            <summary>
+            Indicates implicit instantiation of a type with fixed constructor signature.
+            That means any unused constructor parameters won't be reported as such.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Annotations.ImplicitUseKindFlags.InstantiatedNoFixedConstructorSignature">
+            <summary>Indicates implicit instantiation of a type.</summary>
+        </member>
+        <member name="T:JetBrains.Annotations.ImplicitUseTargetFlags">
+            <summary>
+            Specify what is considered used implicitly when marked
+            with <see cref="T:JetBrains.Annotations.MeansImplicitUseAttribute"/> or <see cref="T:JetBrains.Annotations.UsedImplicitlyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Annotations.ImplicitUseTargetFlags.Members">
+            <summary>Members of entity marked with attribute are considered used.</summary>
+        </member>
+        <member name="F:JetBrains.Annotations.ImplicitUseTargetFlags.WithMembers">
+            <summary>Entity marked with attribute and all its members considered used.</summary>
+        </member>
+        <member name="T:JetBrains.Annotations.PublicAPIAttribute">
+            <summary>
+            This attribute is intended to mark publicly available API
+            which should not be removed and so is treated as used.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.InstantHandleAttribute">
+            <summary>
+            Tells code analysis engine if the parameter is completely handled when the invoked method is on stack.
+            If the parameter is a delegate, indicates that delegate is executed while the method is executed.
+            If the parameter is an enumerable, indicates that it is enumerated while the method is executed.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.PureAttribute">
+            <summary>
+            Indicates that a method does not make any observable state changes.
+            The same as <c>System.Diagnostics.Contracts.PureAttribute</c>.
+            </summary>
+            <example><code>
+            [Pure] int Multiply(int x, int y) => x * y;
+            
+            void M() {
+              Multiply(123, 42); // Waring: Return value of pure method is not used
+            }
+            </code></example>
+        </member>
+        <member name="T:JetBrains.Annotations.MustUseReturnValueAttribute">
+            <summary>
+            Indicates that the return value of method invocation must be used.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.ProvidesContextAttribute">
+            <summary>
+            Indicates the type member or parameter of some type, that should be used instead of all other ways
+            to get the value that type. This annotation is useful when you have some "context" value evaluated
+            and stored somewhere, meaning that all other ways to get this value must be consolidated with existing one.
+            </summary>
+            <example><code>
+            class Foo {
+              [ProvidesContext] IBarService _barService = ...;
+            
+              void ProcessNode(INode node) {
+                DoSomething(node, node.GetGlobalServices().Bar);
+                //              ^ Warning: use value of '_barService' field
+              }
+            }
+            </code></example>
+        </member>
+        <member name="T:JetBrains.Annotations.PathReferenceAttribute">
+            <summary>
+            Indicates that a parameter is a path to a file or a folder within a web project.
+            Path can be relative or absolute, starting from web root (~).
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.SourceTemplateAttribute">
+            <summary>
+            An extension method marked with this attribute is processed by ReSharper code completion
+            as a 'Source Template'. When extension method is completed over some expression, it's source code
+            is automatically expanded like a template at call site.
+            </summary>
+            <remarks>
+            Template method body can contain valid source code and/or special comments starting with '$'.
+            Text inside these comments is added as source code when the template is applied. Template parameters
+            can be used either as additional method parameters or as identifiers wrapped in two '$' signs.
+            Use the <see cref="T:JetBrains.Annotations.MacroAttribute"/> attribute to specify macros for parameters.
+            </remarks>
+            <example>
+            In this example, the 'forEach' method is a source template available over all values
+            of enumerable types, producing ordinary C# 'foreach' statement and placing caret inside block:
+            <code>
+            [SourceTemplate]
+            public static void forEach&lt;T&gt;(this IEnumerable&lt;T&gt; xs) {
+              foreach (var x in xs) {
+                 //$ $END$
+              }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="T:JetBrains.Annotations.MacroAttribute">
+            <summary>
+            Allows specifying a macro for a parameter of a <see cref="T:JetBrains.Annotations.SourceTemplateAttribute">source template</see>.
+            </summary>
+            <remarks>
+            You can apply the attribute on the whole method or on any of its additional parameters. The macro expression
+            is defined in the <see cref="P:JetBrains.Annotations.MacroAttribute.Expression"/> property. When applied on a method, the target
+            template parameter is defined in the <see cref="P:JetBrains.Annotations.MacroAttribute.Target"/> property. To apply the macro silently
+            for the parameter, set the <see cref="P:JetBrains.Annotations.MacroAttribute.Editable"/> property value = -1.
+            </remarks>
+            <example>
+            Applying the attribute on a source template method:
+            <code>
+            [SourceTemplate, Macro(Target = "item", Expression = "suggestVariableName()")]
+            public static void forEach&lt;T&gt;(this IEnumerable&lt;T&gt; collection) {
+              foreach (var item in collection) {
+                //$ $END$
+              }
+            }
+            </code>
+            Applying the attribute on a template method parameter:
+            <code>
+            [SourceTemplate]
+            public static void something(this Entity x, [Macro(Expression = "guid()", Editable = -1)] string newguid) {
+              /*$ var $x$Id = "$newguid$" + x.ToString();
+              x.DoSomething($x$Id); */
+            }
+            </code>
+            </example>
+        </member>
+        <member name="P:JetBrains.Annotations.MacroAttribute.Expression">
+            <summary>
+            Allows specifying a macro that will be executed for a <see cref="T:JetBrains.Annotations.SourceTemplateAttribute">source template</see>
+            parameter when the template is expanded.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Annotations.MacroAttribute.Editable">
+            <summary>
+            Allows specifying which occurrence of the target parameter becomes editable when the template is deployed.
+            </summary>
+            <remarks>
+            If the target parameter is used several times in the template, only one occurrence becomes editable;
+            other occurrences are changed synchronously. To specify the zero-based index of the editable occurrence,
+            use values >= 0. To make the parameter non-editable when the template is expanded, use -1.
+            </remarks>>
+        </member>
+        <member name="P:JetBrains.Annotations.MacroAttribute.Target">
+            <summary>
+            Identifies the target parameter of a <see cref="T:JetBrains.Annotations.SourceTemplateAttribute">source template</see> if the
+            <see cref="T:JetBrains.Annotations.MacroAttribute"/> is applied on a template method.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcActionAttribute">
+            <summary>
+            ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter
+            is an MVC action. If applied to a method, the MVC action name is calculated
+            implicitly from the context. Use this attribute for custom wrappers similar to
+            <c>System.Web.Mvc.Html.ChildActionExtensions.RenderAction(HtmlHelper, String)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcAreaAttribute">
+            <summary>
+            ASP.NET MVC attribute. Indicates that a parameter is an MVC area.
+            Use this attribute for custom wrappers similar to
+            <c>System.Web.Mvc.Html.ChildActionExtensions.RenderAction(HtmlHelper, String)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcControllerAttribute">
+            <summary>
+            ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter is
+            an MVC controller. If applied to a method, the MVC controller name is calculated
+            implicitly from the context. Use this attribute for custom wrappers similar to
+            <c>System.Web.Mvc.Html.ChildActionExtensions.RenderAction(HtmlHelper, String, String)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcMasterAttribute">
+            <summary>
+            ASP.NET MVC attribute. Indicates that a parameter is an MVC Master. Use this attribute
+            for custom wrappers similar to <c>System.Web.Mvc.Controller.View(String, String)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcModelTypeAttribute">
+            <summary>
+            ASP.NET MVC attribute. Indicates that a parameter is an MVC model type. Use this attribute
+            for custom wrappers similar to <c>System.Web.Mvc.Controller.View(String, Object)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcPartialViewAttribute">
+            <summary>
+            ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter is an MVC
+            partial view. If applied to a method, the MVC partial view name is calculated implicitly
+            from the context. Use this attribute for custom wrappers similar to
+            <c>System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper, String)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcSuppressViewErrorAttribute">
+            <summary>
+            ASP.NET MVC attribute. Allows disabling inspections for MVC views within a class or a method.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcDisplayTemplateAttribute">
+            <summary>
+            ASP.NET MVC attribute. Indicates that a parameter is an MVC display template.
+            Use this attribute for custom wrappers similar to 
+            <c>System.Web.Mvc.Html.DisplayExtensions.DisplayForModel(HtmlHelper, String)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcEditorTemplateAttribute">
+            <summary>
+            ASP.NET MVC attribute. Indicates that a parameter is an MVC editor template.
+            Use this attribute for custom wrappers similar to
+            <c>System.Web.Mvc.Html.EditorExtensions.EditorForModel(HtmlHelper, String)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcTemplateAttribute">
+            <summary>
+            ASP.NET MVC attribute. Indicates that a parameter is an MVC template.
+            Use this attribute for custom wrappers similar to
+            <c>System.ComponentModel.DataAnnotations.UIHintAttribute(System.String)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcViewAttribute">
+            <summary>
+            ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter
+            is an MVC view component. If applied to a method, the MVC view name is calculated implicitly
+            from the context. Use this attribute for custom wrappers similar to
+            <c>System.Web.Mvc.Controller.View(Object)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcViewComponentAttribute">
+            <summary>
+            ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter
+            is an MVC view component name.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcViewComponentViewAttribute">
+            <summary>
+            ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter
+            is an MVC view component view. If applied to a method, the MVC view component view name is default.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcActionSelectorAttribute">
+            <summary>
+            ASP.NET MVC attribute. When applied to a parameter of an attribute,
+            indicates that this parameter is an MVC action name.
+            </summary>
+            <example><code>
+            [ActionName("Foo")]
+            public ActionResult Login(string returnUrl) {
+              ViewBag.ReturnUrl = Url.Action("Foo"); // OK
+              return RedirectToAction("Bar"); // Error: Cannot resolve action
+            }
+            </code></example>
+        </member>
+        <member name="T:JetBrains.Annotations.RazorSectionAttribute">
+            <summary>
+            Razor attribute. Indicates that a parameter or a method is a Razor section.
+            Use this attribute for custom wrappers similar to 
+            <c>System.Web.WebPages.WebPageBase.RenderSection(String)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.CollectionAccessAttribute">
+            <summary>
+            Indicates how method, constructor invocation or property access
+            over collection type affects content of the collection.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Annotations.CollectionAccessType.None">
+            <summary>Method does not use or modify content of the collection.</summary>
+        </member>
+        <member name="F:JetBrains.Annotations.CollectionAccessType.Read">
+            <summary>Method only reads content of the collection but does not modify it.</summary>
+        </member>
+        <member name="F:JetBrains.Annotations.CollectionAccessType.ModifyExistingContent">
+            <summary>Method can change content of the collection but does not add new elements.</summary>
+        </member>
+        <member name="F:JetBrains.Annotations.CollectionAccessType.UpdatedContent">
+            <summary>Method can add new elements to the collection.</summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AssertionMethodAttribute">
+            <summary>
+            Indicates that the marked method is assertion method, i.e. it halts control flow if
+            one of the conditions is satisfied. To set the condition, mark one of the parameters with 
+            <see cref="T:JetBrains.Annotations.AssertionConditionAttribute"/> attribute.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AssertionConditionAttribute">
+            <summary>
+            Indicates the condition parameter of the assertion method. The method itself should be
+            marked by <see cref="T:JetBrains.Annotations.AssertionMethodAttribute"/> attribute. The mandatory argument of
+            the attribute is the assertion type.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AssertionConditionType">
+            <summary>
+            Specifies assertion type. If the assertion method argument satisfies the condition,
+            then the execution continues. Otherwise, execution is assumed to be halted.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Annotations.AssertionConditionType.IS_TRUE">
+            <summary>Marked parameter should be evaluated to true.</summary>
+        </member>
+        <member name="F:JetBrains.Annotations.AssertionConditionType.IS_FALSE">
+            <summary>Marked parameter should be evaluated to false.</summary>
+        </member>
+        <member name="F:JetBrains.Annotations.AssertionConditionType.IS_NULL">
+            <summary>Marked parameter should be evaluated to null value.</summary>
+        </member>
+        <member name="F:JetBrains.Annotations.AssertionConditionType.IS_NOT_NULL">
+            <summary>Marked parameter should be evaluated to not null value.</summary>
+        </member>
+        <member name="T:JetBrains.Annotations.TerminatesProgramAttribute">
+            <summary>
+            Indicates that the marked method unconditionally terminates control flow execution.
+            For example, it could unconditionally throw exception.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.LinqTunnelAttribute">
+            <summary>
+            Indicates that method is pure LINQ method, with postponed enumeration (like Enumerable.Select,
+            .Where). This annotation allows inference of [InstantHandle] annotation for parameters
+            of delegate type by analyzing LINQ method chains.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.NoEnumerationAttribute">
+            <summary>
+            Indicates that IEnumerable, passed as parameter, is not enumerated.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.RegexPatternAttribute">
+            <summary>
+            Indicates that parameter is regular expression pattern.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.XamlItemsControlAttribute">
+            <summary>
+            XAML attribute. Indicates the type that has <c>ItemsSource</c> property and should be treated
+            as <c>ItemsControl</c>-derived type, to enable inner items <c>DataContext</c> type resolve.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.XamlItemBindingOfItemsControlAttribute">
+            <summary>
+            XAML attribute. Indicates the property of some <c>BindingBase</c>-derived type, that
+            is used to bind some item of <c>ItemsControl</c>-derived type. This annotation will
+            enable the <c>DataContext</c> type resolve for XAML bindings for such properties.
+            </summary>
+            <remarks>
+            Property should have the tree ancestor of the <c>ItemsControl</c> type or
+            marked with the <see cref="T:JetBrains.Annotations.XamlItemsControlAttribute"/> attribute.
+            </remarks>
+        </member>
+        <member name="T:JetBrains.Annotations.NoReorder">
+            <summary>
+            Prevents the Member Reordering feature from tossing members of the marked class.
+            </summary>
+            <remarks>
+            The attribute must be mentioned in your member reordering patterns
+            </remarks>
+        </member>
+    </members>
+</doc>
